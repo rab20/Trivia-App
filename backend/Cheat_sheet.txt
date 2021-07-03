@@ -1,0 +1,55 @@
+**Initialize and activate a virtualenv using:**
+python -m venv <name of venv>
+venv\Scripts\activate.bat
+To Exit -
+deactivate
+
+**Install the dependencies:**
+pip install -r requirements.txt
+
+pip install virtualenv
+pip install SQLAlchemy
+pip install postgres
+pip install Flask
+pip install Flask-Migrate
+
+pip install psycopg2
+pip3 install Flask-cors
+
+** view the list of installations**
+
+pip list
+
+**Run Flask Application**
+> set FLASK_APP=flaskr
+> set FLASK_ENV=development
+> flask run
+
+**jq**Always use double quotes - 
+chocolatey install jq
+jq
+curl "https://api.github.com/repos/stedolan/jq/commits?per_page=5" | jq "."
+
+**CORS - Cross Origin Resource Sharing**
+pip install -U flask-cors
+
+**curl commands**
+https://github.com/spring-guides/gs-accessing-data-rest/issues/11
+#to go to the url
+	curl http://127.0.0.1:5000/books
+#page
+	http://127.0.0.1:5000/books?page=2
+# update a single book's rating
+	curl -X PATCH -H "Content-Type: application/json" -d "{\"rating\":\"5\"}" http://127.0.0.1:5000/books/8
+# delete a single book
+	curl -X DELETE http://127.0.0.1:5000/books/8 
+#create a book
+	curl -X POST -H "Content-Type: application/json" -d "{\"title\":\"Neverwhere\", \"author\":\"Neil Gaiman\", \"rating\":\"5\"}" http://127.0.0.1:5000/books 
+
+**Project**
+These are the files you'd want to edit in the frontend:
+
+    ./frontend/src/components/QuestionView.js
+    ./frontend/src/components/FormView.js
+    ./frontend/src/components/QuizView.js
+  
